@@ -2,7 +2,7 @@
 
 ## Вариант 1: новый vault из шаблона (рекомендуется)
 
-1. На странице [github.com/kringova/taskvault](https://github.com/kringova/taskvault) нажмите **Use this template → Create a new repository**. Сделайте свой репозиторий **приватным** — в vault будет жить контекст ваших проектов.
+1. На странице [github.com/kringova/artelush](https://github.com/kringova/artelush) нажмите **Use this template → Create a new repository**. Сделайте свой репозиторий **приватным** — в vault будет жить контекст ваших проектов.
 2. Склонируйте к себе:
    ```bash
    git clone git@github.com:<вы>/<ваш-vault>.git ~/vault
@@ -19,7 +19,7 @@
 Просто склонируйте шаблон и удалите привязку к origin:
 
 ```bash
-git clone https://github.com/kringova/taskvault.git ~/vault
+git clone https://github.com/kringova/artelush.git ~/vault
 cd ~/vault && git remote remove origin
 ```
 

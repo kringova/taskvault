@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Локальный дашборд taskvault. Без зависимостей: читает markdown-vault и отдаёт веб-страницу.
+// Локальный дашборд Артель. Без зависимостей: читает markdown-vault и отдаёт веб-страницу.
 // Запуск из корня vault:  node dashboard/serve.js  [--port 4321] [--root PATH] [--open]
 // Страницы: /  (Проекты)  /kanban  /rice  /inbox — навигация как на «продовом» дашборде.
 
@@ -215,7 +215,7 @@ function render(data, page) {
 
   return `<!doctype html><html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>taskvault — ${esc(def.title)}</title>
+<title>Артель — ${esc(def.title)}</title>
 <style>
   :root { --accent:#ef6b5b; --ink:#262626; --muted:#737373; --line:#e5e5e5; --bg:#fafafa; }
   * { box-sizing:border-box; }
@@ -289,7 +289,7 @@ function render(data, page) {
   @media (max-width:580px){ .grid,.kanban{grid-template-columns:1fr} .link{padding:6px 8px} }
 </style></head><body>
 <nav class="nav"><div class="nav-in">
-  <a class="logo" href="/"><i>ll</i> taskvault</a>
+  <a class="logo" href="/"><i>ll</i> Артель</a>
   ${link("/", "Проекты", "projects")}
   ${link("/kanban", "Канбан", "kanban")}
   ${link("/rice", "RICE", "rice")}
@@ -320,7 +320,7 @@ const server = createServer((req, res) => {
 
 server.listen(PORT, () => {
   const url = `http://localhost:${PORT}`;
-  console.log(`\n  taskvault дашборд → ${url}\n  vault: ${ROOT}\n  Ctrl+C для остановки\n`);
+  console.log(`\n  Артель дашборд → ${url}\n  vault: ${ROOT}\n  Ctrl+C для остановки\n`);
   if (OPEN) {
     const cmd = process.platform === "darwin" ? "open" : process.platform === "win32" ? "start" : "xdg-open";
     spawn(cmd, [url], { stdio: "ignore", detached: true, shell: process.platform === "win32" }).unref();
