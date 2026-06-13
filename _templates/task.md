@@ -11,6 +11,8 @@ rice_impact: 3
 rice_confidence: 80
 rice_effort: 0.2
 summary: ""
+roles: [reviewer]
+model_tier: middle
 ---
 
 ## Что нужно сделать
